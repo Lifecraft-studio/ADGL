@@ -1,0 +1,36 @@
+<form [formGroup] = editForm class="form-control container" (ngSubmit)="editCustomer(); activeModal.close()">
+  <div class="mb-3 row">
+    <label class="col-sm-3">Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control col-sm-9" formControlName="name">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3">Licence Id</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" formControlName="licenceId">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3">CPrice</label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" formControlName="cPrice">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3">TPrice </label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" formControlName="tPrice">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-3">Certificate</label>
+    <div class="col-sm-9">
+      <input type="file" class="form-control col-sm-9" (change)="onFileSelect($event)">
+    </div>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-success me-1">Done</button>
+    <button type="button" class="btn btn-danger" (click)="activeModal.close()">Cancel</button>
+  </div>
+</form>

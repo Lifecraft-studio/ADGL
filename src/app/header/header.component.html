@@ -1,0 +1,26 @@
+<header class="header">
+  <nav class="navbar">
+    <a class="nav-logo">
+      <img src="assets/images/adgl_logo.svg" alt="logo">
+    </a>
+    <ul class="nav-menu" #navmenu>
+      <li class="nav-item" (click)="onNavMenuClick($event)">
+          <a href="#" class="nav-link" >Home</a>
+      </li>
+      <li class="nav-item" (click)="onNavMenuClick($event)">
+          <a href="#about" class="nav-link" >About us</a>
+      </li>
+      <li class="nav-item" (click)="onNavMenuClick($event)">
+          <a href="#services" class="nav-link" >Services</a>
+      </li>
+      <li class="nav-item" (click)="onNavMenuClick($event)">
+          <a href="#contact" class="nav-link" >Contact</a>
+      </li>
+    </ul>
+    <div class="hamburger" (click)="toggleMenu($event)" #hamburger>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav> 
+</header>
